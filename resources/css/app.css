@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Custom package styles */
+.card-package { border-radius: .6rem; }
+.hero { padding: 2rem; }
+
+:root{
+    --c-black: #000000;
+    --c-white: #ffffff;
+    --c-purple: #5B21B6;
+    --c-purple-dark: #4c1396;
+}
+
+:root{
+    --c-bg: #000000; /* page background */
+    --c-surface: #0b0b0f; /* cards / panels */
+    --c-muted: #9ca3af; /* light gray text */
+}
+
+body{
+    color: var(--c-white);
+    background-color: var(--c-bg);
+    font-family: var(--font-sans);
+}
+
+
+.navbar-custom{
+    background: linear-gradient(90deg,var(--c-purple),var(--c-purple-dark));
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+.navbar-custom .nav-link, .navbar-custom .brand-text{
+    color: var(--c-white) !important;
+}
+
+.hero{ background: linear-gradient(90deg,var(--c-purple),#8b5cf6); color: var(--c-white); padding: 2rem; border-radius: .6rem; }
+
+.card-package{ box-shadow: 0 6px 30px rgba(0,0,0,0.6); background: var(--c-surface); color: var(--c-white); border: 1px solid rgba(255,255,255,0.03); }
+.card-package .card-body{ color: var(--c-white); }
+
+.btn-primary{
+    background-color: var(--c-purple);
+    border-color: var(--c-purple-dark);
+}
+.btn-primary:hover{ background-color: var(--c-purple-dark); }
+
+.nav-link-custom{ color: rgba(255,255,255,0.95) !important; }
+
+/* Form controls - dark theme */
+.form-control{
+    background: #0f0f13;
+    color: var(--c-white);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.form-control:focus{ box-shadow: 0 0 0 0.2rem rgba(91,33,182,0.15); border-color: var(--c-purple); }
+
+.alert{ background: #0e0e12; color: var(--c-white); border: 1px solid rgba(255,255,255,0.04); }
+
+.btn-outline-light{
+    color: var(--c-white);
+    border-color: rgba(255,255,255,0.08);
+}
+
+.container main, main.container{ padding-top: 1rem; }
+
+
+
